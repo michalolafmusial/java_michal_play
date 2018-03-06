@@ -17,4 +17,14 @@ public class Utility {
         }
         return true;
     }
+
+    static void exitIfNotNumber ()
+
+    {
+            System.out.println("To nie liczba");
+            System.exit(0);
+    }
+
+
+
 }
