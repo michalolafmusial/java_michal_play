@@ -4,7 +4,6 @@ import java.util.Scanner;
 import java.util.Random;
 import java.lang.Integer;
 
-
 public class Main {
 
     private int wylosowanaLiczba;
@@ -20,8 +19,8 @@ public class Main {
         System.out.println("Wylosuj liczbę z przedziału od 1 do ?");
 
         String maxRange;
-        Scanner odczyt1 = new Scanner(System.in);
-        maxRange = odczyt1.nextLine();
+        Scanner odczyt = new Scanner(System.in);
+        maxRange = odczyt.nextLine();
 
         if (!Utility.numberOrNot(maxRange)) {
             Utility.exitIfNotNumber();
@@ -40,8 +39,7 @@ public class Main {
         System.out.println("Wylosowano liczbe. Zgadnij jaką. Ile chcesz prób?");
 
         String numberOfTries;
-        Scanner odczyt3 = new Scanner(System.in);
-        numberOfTries = odczyt3.nextLine();
+        numberOfTries = odczyt.nextLine();
 
         if (!Utility.numberOrNot(numberOfTries)) {
             Utility.exitIfNotNumber();
@@ -55,8 +53,7 @@ public class Main {
         boolean success = false;
         while (licznik < (Integer.parseInt(numberOfTries) + 1) && !success) {
             System.out.println("Proba #" + licznik);
-            Scanner odczyt2 = new Scanner(System.in);
-            userNumber = odczyt2.nextLine();
+            userNumber = odczyt.nextLine();
 
             if (!Utility.numberOrNot(userNumber)) {
                 Utility.exitIfNotNumber();
