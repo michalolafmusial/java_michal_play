@@ -1,6 +1,6 @@
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -33,23 +33,40 @@ public class EmployeesArray {
         this.employeesListString = employeesListString;
     }
 
-    public void uploadFromFile(String filename) throws FileNotFoundException {
-
-        File file = new File(filename);
-        Scanner in = new Scanner(file);
-
-        while (in.hasNext()) {
-            employeesListString.add(in.nextLine());
+    public void uploadAndCreateObject (String file_name) throws FileNotFoundException {
+        // Dodawanie kolejnych wierszy do tablicy ArrayList z pliku (kazdy wiersz to nowy wpis)
+        Scanner s = new Scanner(new File(file_name));
+        ArrayList<String> list = new ArrayList<String>();
+        while (s.hasNext()) {
+            list.add(s.nextLine());
 
 
         }
+        s.close();
 
-        for (int i = 0; i < employeesListString.size(); i++) {
-            System.out.println(employeesListString.get(i));
-        }
-
-
+        System.out.println(list);
+      //  System.out.println(list.get(1));
+      //  System.out.println(list.get(3));
     }
+
+
+    public void uploadFromFile(String filename)  {
+
+
+
+
+           // BufferedReader br=new BufferedReader(new FileReader(filename));
+           // String line= br.readLine(); // reads the first line, or nothing
+            String sample = "Pies,Kot,Papuga";
+           // while (line != null) {
+                String[] items = sample.split(",");
+                employeesListString = Arrays.asList(items);
+                System.out.println(employeesListString.get(1));
+         //   }
+
+        }
+
+
 
     public List<Employees> fillEmployeeArray() {
         Employees employee_1 = new Employees("Michal", "Musial", 10000, "male", 1);
