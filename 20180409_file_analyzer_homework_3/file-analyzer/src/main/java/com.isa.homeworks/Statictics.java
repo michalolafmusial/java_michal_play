@@ -18,8 +18,8 @@ public class Statictics {
         return counter;
     }
 
-    /**
-     *
+    /** Function to create stream from ActivitiesArray, sort it by spent_time,
+     * create new collection and get first record that contains lowest spent_time value
      * @return object from ActivitiesArray that contains shortest activity time
      * @throws IOException
      */
@@ -46,6 +46,12 @@ public class Statictics {
         return act;
     }
 
+    /** Function to create stream from ActivitiesArray, sort it in reverse orderby spent_time,
+     * create new collection and get first record that contains lowest spent_time value
+     * @return object from ActivitiesArray that contains shortest activity time
+     * @throws IOException
+     */
+
     public Activity longestActivityObject() throws IOException {
 
         CSVReader csvReader = new CSVReader();
@@ -65,7 +71,6 @@ public class Statictics {
         //tablica - stream - sortowanie po komparatorze - tworzenie nowej kolekcji - wziecie nowego wiersza
         Activity act = tablica.stream().sorted(byspenttime.reversed()).collect(Collectors.toList()).get(0);
 
-        //
         return act;
     }
 
@@ -81,8 +86,23 @@ public class Statictics {
 
         // tablica - stream - mapowanie aby wziac tylko wartosc spent time - zmapowanie ich do integera - wziecie sredniej z nich
         OptionalDouble average = tablica.stream().map(Activity::getSpent_time).mapToInt(Activity -> Activity).average();
-        System.out.println(average);
 
+        return average.getAsDouble();
+    }
+
+
+    public double summaryActivityTime() throws IOException {
+
+        CSVReader csvReader = new CSVReader();
+        csvReader.readCSV();
+        ArrayList<Activity> tablica = csvReader.getActivitiesArrayList();
+
+        Comparator<Activity> byspenttime = Comparator.comparingInt(Activity::getSpent_time);
+
+        // tablica.stream().map(Activity::getSpent_time).forEach(System.out::println);
+
+        // tablica - stream - mapowanie aby wziac tylko wartosc spent time - zmapowanie ich do integera - wziecie sredniej z nich
+        OptionalDouble average = OptionalDouble.of(tablica.stream().map(Activity::getSpent_time).mapToInt(Activity -> Activity).sum());
         return average.getAsDouble();
     }
 

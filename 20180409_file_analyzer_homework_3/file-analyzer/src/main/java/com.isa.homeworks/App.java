@@ -12,6 +12,12 @@ public class App
         //  while (scanner.hasNext()) {
         //      System.out.println(scanner.next());
         //  }
+
+        App.menu();
+
+    }
+
+    public static void menu () throws IOException {
         CSVReader csvReader = new CSVReader();
         csvReader.readCSV();
         //System.out.println(csvReader.getActivitiesArrayList().get(2).getEnd_time());
@@ -22,6 +28,8 @@ public class App
         System.out.println("Shortest activity record. Name: "+statictics.shortestActivityObject().getActivity_name()+" time_spent: "+statictics.shortestActivityObject().getSpent_time());
         System.out.println("Longest  activity record. Name: "+statictics.longestActivityObject().getActivity_name()+" time_spent: "+statictics.longestActivityObject().getSpent_time());
         System.out.println("Average activity time: "+statictics.averageActivityTime());
+        // run static method secondToHourMinuteStringConverter from Utility class
+        System.out.println("Summary activity time: "+Utility.secondToHourMinuteStringConverter(statictics.summaryActivityTime()));
     }
 
 }

@@ -58,6 +58,6 @@ public class Activity {
     }
 
     public String toString() {
-        return "start_time: " + this.start_time + "| end_time: " + this.end_time + "| productivity: " +this.productivity + "| activity_name: " + this.activity_name+"| category_name "+this.category_name+"| spent_time "+this.spent_time;
+        return "start_time: " + this.start_time + "| end_time: " + this.end_time + "| productivity: " + this.productivity + "| activity_name: " + this.activity_name + "| category_name " + this.category_name + "| spent_time " + this.spent_time;
     }
 }
