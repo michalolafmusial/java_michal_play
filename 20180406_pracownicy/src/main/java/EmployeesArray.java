@@ -1,8 +1,5 @@
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class EmployeesArray {
     private String filename = "src/main/resources/employees.txt";
@@ -71,6 +68,7 @@ public class EmployeesArray {
             Employees employees = new Employees(a[0],a[1],Integer.valueOf(a[2]),a[3],Integer.valueOf(a[4]));
             // dodaje nowo tworzone obiekty do array listy employeesow
             employeesListObjects.add(employees);
+
             //System.out.println(a[2]);
             //System.out.println(employeesListObjects);
         }
@@ -89,6 +87,11 @@ public class EmployeesArray {
         employeesListObjects.add(employee_3);
 
         return employeesListObjects;
+    }
+
+    @Override
+    public String toString() {
+        return employeesListObjects.get(0) + " | " + employeesListObjects.get(1) + " | " + employeesListObjects.get(2) + " | " + employeesListObjects.get(3) + " | " + employeesListObjects.get(4);
     }
 }
 

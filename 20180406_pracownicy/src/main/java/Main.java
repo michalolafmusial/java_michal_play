@@ -1,4 +1,7 @@
 import java.io.FileNotFoundException;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
@@ -10,6 +13,8 @@ public class Main {
         // tutaj juz moge sie dostawac do konkretnych wartosci obiektow employees
         System.out.println(employeesArray.getEmployeesListObjects().get(0).getFirstName());
         System.out.println(employeesArray.getEmployeesListObjects().get(2).getSecondName());
+        //Collections.sort((List<Comparable>) employeesArray);
+        System.out.println(employeesArray);
 
     }
 }
