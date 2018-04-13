@@ -37,12 +37,16 @@ public class CSVReader {
         for (CSVRecord record : records) {
             Activity activity = new Activity();
 
+          //  StringBuffer sBuffer = new StringBuffer("test");
+
             activity.setStart_time(record.get("start_time"));
             activity.setEnd_time(record.get("end_time"));
             activity.setProductivity(Integer.parseInt(record.get("productivity")));
             activity.setActivity_name(record.get("activity_name"));
             activity.setCategory_name(record.get("category_name"));
             activity.setSpent_time(Integer.parseInt(record.get("spent_time")));
+            StringBuffer sBuffer = new StringBuffer(record.get("start_time"));
+            activity.setHour(sBuffer.substring(11,13).toString());
 
             list.add(activity);
 

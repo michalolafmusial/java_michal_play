@@ -8,6 +8,15 @@ public class Activity {
     private String activity_name;
     private String category_name;
     private int spent_time;
+    private String hour;
+
+    public String getHour() {
+        return hour;
+    }
+
+    public void setHour(String hour) {
+        this.hour = hour;
+    }
 
     public String getStart_time() {
         return start_time;
@@ -58,6 +67,6 @@ public class Activity {
     }
 
     public String toString() {
-        return "start_time: " + this.start_time + "| end_time: " + this.end_time + "| productivity: " + this.productivity + "| activity_name: " + this.activity_name + "| category_name " + this.category_name + "| spent_time " + this.spent_time;
+        return "hour: ||"+this.hour+"||start_time: " + this.start_time + "| end_time: " + this.end_time + "| productivity: " + this.productivity + "| activity_name: " + this.activity_name + "| category_name " + this.category_name + "| spent_time " + this.spent_time;
     }
 }

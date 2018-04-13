@@ -1,10 +1,13 @@
 package com.isa.homeworks;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.OptionalDouble;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
 import java.util.stream.Collectors;
+
+import static java.util.stream.Collectors.counting;
 
 public class Statictics {
 
@@ -104,6 +107,60 @@ public class Statictics {
         // tablica - stream - mapowanie aby wziac tylko wartosc spent time - zmapowanie ich do integera - wziecie sredniej z nich
         OptionalDouble average = OptionalDouble.of(tablica.stream().map(Activity::getSpent_time).mapToInt(Activity -> Activity).sum());
         return average.getAsDouble();
+    }
+
+    public String listOfHoursOnFacebook () throws IOException {
+
+        CSVReader csvReader = new CSVReader();
+        csvReader.readCSV();
+        ArrayList<Activity> tablica = csvReader.getActivitiesArrayList();
+
+        LocalDate date = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+
+        //Comparator<Activity> byspenttime = Comparator.comparingInt(Activity::getSpent_time);
+
+        // tablica.stream().map(Activity::getSpent_time).forEach(System.out::println);
+
+
+
+
+        // tablica - stream - mapowanie aby wziac tylko wartosc spent time - zmapowanie ich do integera - wziecie sredniej z nich
+        String collect = tablica.stream()
+                .filter(Activity -> "facebook.com".equals(Activity.getActivity_name()))
+                .map(Activity::getStart_time)
+                .map(startTime -> LocalDateTime.parse(startTime, formatter))
+                .map(startTime -> "" + startTime.getHour())
+                .distinct()
+                //.map(Integer::toString)
+                .collect(Collectors.joining(","));
+        //System.out.println(collect);
+        return collect;
+    }
+
+    public double mostIntensiveHour() throws IOException {
+
+        CSVReader csvReader = new CSVReader();
+        csvReader.readCSV();
+        ArrayList<Activity> tablica = csvReader.getActivitiesArrayList();
+
+        System.out.println("most intensive hour");
+
+        //Comparator<Activity> byspenttime = Comparator.comparingInt(Activity::getSpent_time);
+
+        // tablica.stream().map(Activity::getSpent_time).forEach(System.out::println);
+
+        // tablica - stream - mapowanie aby wziac tylko wartosc spent time - zmapowanie ich do integera - wziecie sredniej z nich
+
+        Map<String, Long> map = tablica.stream().collect(Collectors.groupingBy(Activity::getHour, counting()));
+
+
+        System.out.println(map);
+
+
+
+
+        return 2;
     }
 
 

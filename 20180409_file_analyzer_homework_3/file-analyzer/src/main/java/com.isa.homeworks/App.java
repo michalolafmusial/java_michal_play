@@ -20,6 +20,8 @@ public class App
     public static void menu () throws IOException {
         CSVReader csvReader = new CSVReader();
         csvReader.readCSV();
+
+        //System.out.println(csvReader.readCSV());
         //System.out.println(csvReader.getActivitiesArrayList().get(2).getEnd_time());
         //System.out.println(csvReader.readCSV().get(1).getEnd_time());
 
@@ -30,6 +32,10 @@ public class App
         System.out.println("Average activity time: "+statictics.averageActivityTime());
         // run static method secondToHourMinuteStringConverter from Utility class
         System.out.println("Summary activity time: "+Utility.secondToHourMinuteStringConverter(statictics.summaryActivityTime()));
+        System.out.print("Facebook activity hours: "+statictics.listOfHoursOnFacebook());
+
+        statictics.mostIntensiveHour();
+
     }
 
 }
