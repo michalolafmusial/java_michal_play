@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 Jan,Kowalski,2010,M,3
 Agnieszka,Cuber,2900,K,3
 Adam,Nowak,1100,M,4
 Sylwia,Zych,2100,K,3
 Beata,Dudek,1900,K,4
+=======
+"Jan","Kowalski",2010,"M",3
+"Agnieszka","Cuber",2900,"K",3
+"Adam","Nowak",1100,"M",4
+"Sylwia","Zych",2100,"K",3
+"Beata","Dudek",1900,"K",4
+>>>>>>> bdb578545d82d555ad36b40eea39af87fef5d9be
