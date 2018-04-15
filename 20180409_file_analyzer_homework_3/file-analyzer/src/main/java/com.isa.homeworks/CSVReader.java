@@ -23,9 +23,9 @@ public class CSVReader {
 
     /**
      * Method to parse csv file using final parameter
-     * inside loop new "activity" object is created and set and added to ArrayList list
+     * new "activity" object is created inside the loop, set and added to ArrayList list
      * then ArrayList "list" is assigned to parameter activitiesArrayList that can be used by other classes
-     * @return activitiesArrayList - list of Activity objects from parsed csv file
+     * @return activitiesArrayList - list of Activity objects (ArrayList) from parsed csv file
      * @throws IOException
      */
     public ArrayList<Activity> readCSV() throws IOException {
