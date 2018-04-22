@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <style>
+        /**/
+				th {font-style: italic}
+				tbody tr:nth-child(even) { background-color: 	#d5d5d5; padding: 20px 20px 20px 80px;}
+				td  {padding: 6}
+				th, td {border: 1px solid}
+
+	}
+    </style>
+</head>
+
+
+<form action="">
+	<input id = "button" type="text" name="nazwa" value="1-50"/>
+	<button type="rodzaj" onclick="function()">Sprawdź</button>
+</form>
+
+
+    <script>
+        (function () {
+				
+				const input = document.getElementById('button')
+				const NUMBER_TO_FIND = Math.floor((Math.random()*50)+1);
+				//alert(NUMBER_TO_FIND);
+				let counter = 1;
+				
+			//	let input = prompt ("Podaj liczbe 0-50");
+
+
+				//while (NUMBER_TO_FIND!=input) 
+				//{
+				if (NUMBER_TO_FIND > input)
+						alert("Za mała liczba");
+						else 
+						alert("Za duża liczba");
+						counter++;
+						//input = prompt ("Podaj liczbe 0-50");
+				//}
+				
+				alert("Zgadles po " +counter + " liczbie prób");
+				
+				
+				
+				
+				
+            let names = ['Janusz', 'Jan', 'Marek', 'Mirosław', 'Zdzisław', 'Jędrzej', 'Adam', 'Grzegorz', 'Bonifacy', 'Kamil', 'Paweł', 'Gaweł'];
+            let surnames = ['Nowak', 'Pawlak', 'Kowalski', 'Jakubowski', 'Nowakowski', 'Adamski', 'Opolski', 'z Bogdańca', 'Kowalewski', 'Kowal', 'Wiśniewski', 'Abacki', 'Dębski', 'Lipski'];
+            let favs = ['Danie w mordę', 'Kebab', 'Schabowy', 'Pierogi ruskie', 'Gołąbki', 'Pizza', 'Naleśniki', 'Chleb posmarowany nożem', 'Lasagne', 'Szpinak', 'Kluski z rosołem', 'Figa z makiem'];
+
+            let placeholder = document.getElementById('placeholder');
+            for (let i = 0; i < 15; ++i) {
+                placeholder.appendChild(htmlToElement(`<tr>
+                    <td>${names[getRandomMax(names.length)]}</td>
+                    <td>${surnames[getRandomMax(surnames.length)]}</td>
+                    <td>${getRandomMax(28, 1).padStart(2, '0')}-${getRandomMax(12, 1).padStart(2, '0')}-${getRandomMax(2000, 1940)}</td>
+                    <td>${favs[getRandomMax(favs.length)]}</td>
+                </tr>`));
+            }
+
+            function getRandomMax(max, min = 0) {
+                min = Math.ceil(min);
+                max = Math.floor(max);
+                return Math.floor(Math.random() * (max - min)) + min + '';
+            }
+
+            function htmlToElement(html) {
+                var template = document.createElement('template');
+                html = html.trim();
+                template.innerHTML = html;
+                return template.content.firstChild;
+            }
+        })();
+    </script>
+</body>
+
+</html>
