@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -34,13 +35,38 @@ public class Main {
         double[] y = {47, 5};
         double[] z = {7, 8};
         System.out.println(barTriang(x, y, z)[1]);
+
+        String phrase1 = "Michal Musial to ja";
+        System.out.println(convertFirstLetterOfStringValuesToUpper(phrase1));
     }
+
+
+    public static String convertFirstLetterOfStringValuesToUpper(String phrase) {
+        // TODO put your code below this comment
+        String[] divided = phrase.split(" ");
+        for (int i = 0; i < divided.length; i++) {
+            divided[i] = divided[i].substring(0, 1).toUpperCase() + divided[i].substring(1);
+        }
+        System.out.println(Arrays.toString(divided));
+
+
+        return divided.toString();
+    }
+
+
+    // sortowanie listy wartosci, case insensitive
+    public static List<String> sortList(List<String> textbooks) {
+        //Cramming right before a test can't be that bad?
+        Collections.sort(textbooks, String.CASE_INSENSITIVE_ORDER);
+        return textbooks;
+    }
+
 
     public static double[] barTriang(double[] x, double[] y, double[] z) {
         // liczenie srodka ciezkosci trojkata
         double xs = ((x[0] + y[0] + z[0]) / 3);
         double ys = ((x[1] + y[1] + z[1]) / 3);
-       // zaokraglenie do 4 miejsc po przecinku
+        // zaokraglenie do 4 miejsc po przecinku
         double[] d = {Math.round(xs * 10000) / 10000.0d, Math.round(ys * 10000) / 10000.0d};
         return d;
     }

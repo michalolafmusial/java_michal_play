@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70b602b2-a637-4fe0-b069-a69f26aa53ae" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../../20180424_html/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../20180424_html/src/main/webapp/WEB-INF/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/isa/homeworks/Statictics.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/isa/homeworks/Statictics.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20180422_html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../20180422_html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../20180422_html/index_cw4.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../20180422_html/index_cw4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20180424_html/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20180424_html/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -105,8 +99,8 @@
       <file leaf-file-name="Statictics.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com.isa.homeworks/Statictics.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="167" column="6" selection-start-line="167" selection-start-column="6" selection-end-line="167" selection-end-column="6" />
+            <state relative-caret-position="108">
+              <caret line="165" column="6" lean-forward="true" selection-start-line="165" selection-start-column="6" selection-end-line="165" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -180,8 +174,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -226,6 +218,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -233,7 +227,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../git/jjdzw1-niebiescy-app/pom.xml" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -340,12 +334,14 @@
       <updated>1523398315002</updated>
       <workItem from="1524521200110" duration="168000" />
       <workItem from="1524521414050" duration="700000" />
-      <workItem from="1524522553997" duration="779000" />
+      <workItem from="1524522553997" duration="869000" />
+      <workItem from="1525731371160" duration="130000" />
+      <workItem from="1525731647283" duration="655000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1647000" />
+    <option name="totallyTimeSpent" value="2522000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1264" height="776" extended-state="6" />
@@ -353,7 +349,6 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32892805" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -361,7 +356,7 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33773863" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33773863" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -375,6 +370,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32892805" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info id="Learn" order="2" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -951,8 +947,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com.isa.homeworks/Statictics.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="167" column="6" selection-start-line="167" selection-start-column="6" selection-end-line="167" selection-end-column="6" />
+        <state relative-caret-position="108">
+          <caret line="165" column="6" lean-forward="true" selection-start-line="165" selection-start-column="6" selection-end-line="165" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
