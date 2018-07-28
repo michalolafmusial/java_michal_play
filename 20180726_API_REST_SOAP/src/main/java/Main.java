@@ -140,7 +140,7 @@ public class Main {
 
 
        response.readEntity(FakeObject.class);
-       
+
       //  System.out.println(fakeObject.getRestResponse().getResult().get(0));
 
         response.close();
