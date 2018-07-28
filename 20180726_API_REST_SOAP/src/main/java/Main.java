@@ -7,6 +7,7 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Form;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriBuilder;
+import java.util.List;
 
 
 public class Main {
@@ -125,40 +126,26 @@ public class Main {
     public   static  void UsaStatesGet () {
 
 
-// 1022700454d13f534d3f384d6efc9faa
-
-
-
+        FakeObject fakeObject = new FakeObject();
        String Result;
 
-        Client client;
+        Client client  = ClientBuilder.newClient();
 
-        client = ClientBuilder.newClient();
-
-//   WebTarget target = client.target("http://api.openweathermap.org/data/2.5/weather?q=Sidney&appid=6f2f3fdaf6a2938053ec0349f09994fa");
-        WebTarget target1 = client.target("http://services.groupkt.com/state/get/USA/all");
-
+  WebTarget target1 = client.target("http://services.groupkt.com/state/get/USA/all");
 
 
 
         Response response = target1.request().get();
 
-     //   Result = response.readEntity(String.class);
-
-    //    System.out.println(Result);
 
 
-        RestResponse restResponse = new RestResponse();
-        Result result = new Result();
-        Example example = new Example();
+       response.readEntity(FakeObject.class);
+       
+      //  System.out.println(fakeObject.getRestResponse().getResult().get(0));
 
-       response.readEntity(RestResponse.class);
+        response.close();
 
-     //   RestResponse restResponse = new RestResponse();
 
-   //     System.out.println("Capital: "+restResponse.getResult().get(0).getCapital());
-
-      //  response.close();
 
     }
 

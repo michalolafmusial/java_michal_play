@@ -1,6 +1,4 @@
-
-import java.util.HashMap;
-import java.util.Map;
+import org.codehaus.jackson.annotate.JsonProperty;
 
 public class Result {
 
@@ -9,9 +7,9 @@ public class Result {
     private String name;
     private String abbr;
     private String area;
+    @JsonProperty("largest_city")
     private String largestCity;
     private String capital;
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     public Integer getId() {
         return id;
@@ -69,12 +67,5 @@ public class Result {
         this.capital = capital;
     }
 
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
 
 }
