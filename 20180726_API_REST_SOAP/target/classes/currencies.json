@@ -1,0 +1,53 @@
+{
+<<<<<<< HEAD
+  "baseCurrency":
+=======
+  "baseCurrency": 
+>>>>>>> 1a43e0f76132d555c74b9e32fc97f54c17aa207f
+  {
+    "code": "PLN",
+    "name": "polski złoty",
+    "value": 1.0
+  },
+  "currencies": [
+    {
+      "code": "USD",
+      "name": "dolar amerykański",
+      "value": 3.6682
+    },
+    {
+      "code": "EUR",
+      "name": "euro",
+      "value": 4.3166
+    },
+    {
+      "code": "CHF",
+      "name": "frank szwajcarski",
+      "value": 3.7668
+    },
+    {
+      "code": "GBP",
+      "name": "funt szterling",
+      "value": 4.8703
+    },
+    {
+      "code": "JPY",
+      "name": "jen",
+      "value": 3.2527
+    },
+    {
+      "code": "CZK",
+      "name": "korona czeska",
+      "value": 0.1657
+    },
+    {
+      "code": "UAH",
+      "name": "hrywna",
+      "value": 0.1384
+    }
+  ]
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 1a43e0f76132d555c74b9e32fc97f54c17aa207f
