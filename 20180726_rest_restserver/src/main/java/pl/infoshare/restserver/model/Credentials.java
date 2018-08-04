@@ -21,7 +21,7 @@ public class Credentials {
     public String getUser() {
         return user;
     }
-
+@JsonIgnore
     public String getPassword() {
         return password;
     }

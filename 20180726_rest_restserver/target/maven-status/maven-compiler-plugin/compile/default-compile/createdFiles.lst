@@ -1,0 +1,5 @@
+pl/infoshare/restserver/model/Credentials.class
+pl/infoshare/restserver/model/User.class
+pl/infoshare/restserver/service/UserService.class
+pl/infoshare/restserver/model/UserStore.class
+pl/infoshare/restserver/App.class

@@ -2,6 +2,7 @@ package pl.infoshare.restserver.model;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.w3c.dom.stylesheets.LinkStyle;
 
 import javax.ejb.Singleton;
 import java.util.HashMap;
@@ -47,6 +48,15 @@ public class UserStore {
     public Optional<User> findById(Integer id) {
         return Optional.ofNullable(base.get(id));
     }
+
+    public User findByIdReturnUser(Integer id) {
+        return base.get(id);
+    }
+
+    public void removeUser(Integer id) {
+        base.remove(id);
+    }
+
 
     public boolean authenticate(String username, String password) {
         return base.values().stream()
